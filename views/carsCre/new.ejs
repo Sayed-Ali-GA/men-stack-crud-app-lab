@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Create a Business!</title>
+</head>
+<body>
+    <h1>Create a New Business </h1>
+    <form action="/carsCre" method="POST">
+
+    <label for="name">Business Name:</label>
+    <input type="text" name="name" id="name" required />
+
+    <label for="category">Category:</label>
+    <input type="text" name="category" id="category" placeholder="e.g. Medical, IT Services" required />
+
+    <label for="description">Description:</label>
+    <textarea name="description" id="description" rows="4"></textarea>
+
+    <label for="location">Location:</label>
+    <input type="text" name="location" id="location" required />
+
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="+973-1234-5678" />
+
+    <label for="website">Website:</label>
+    <input type="url" name="website" id="website" placeholder="https://example.com" />
+
+  <div class="checkbox-div">
+    <label for="isVerified">Verified Listing?</label>
+    <input type="checkbox" name="isVerified" id="isVerified" />
+  </div>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Add a New Car</title>
+    <link rel="stylesheet" href="/styleesheets/style.css">
+</head>
+<body>
+    <h1>Add a New Car</h1>
+    <form action="/carsCre" method="POST">
+        
+        <label for="Brand">Brand:</label>
+        <input type="text" id="make" name="make" placeholder="e.g. Toyota" required />
+
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" placeholder="e.g. Corolla" required />
+
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" placeholder="e.g. 2020" required />
+
+        <label for="color">Color:</label>
+        <input type="text" id="color" name="color" placeholder="e.g. Red" />
+
+        <label for="price">Price BD:</label>
+        <input type="number-text" id="price" name="price" placeholder="2500BD" />
+
+        <label for="location">Location:</label>
+       <input type="text" name="location" id="location" required  placeholder="Manama"/>
+
+       <label for="phoneNumber">Phone Number:</label>
+       <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="+973-1234-5678" />
+
+       <label for="website">Website:</label>
+       <input type="url" name="website" id="website" placeholder="https://example.com" />
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" placeholder="Add any details here..."></textarea>
+
+        <div class="checkbox-div">
+            <label for="isNew">Is the car new?</label>
+            <input type="checkbox" id="isNew" name="isNew" />
+        </div>
+
+        <button type="submit">Add Car</button>
+    </form>
+</body>
+</html>

@@ -1,10 +1,13 @@
 const mongoose = require('mongoose');
 const carsSchema = new mongoose.Schema({
-  name: String,
-  category: String,
-  description: String,
+  Brand: String,
+  model: String,
+  year: String,
+  color: String,
+  price: String,
   location: String,
   phoneNumber: String,
+  description: String,
   website: String,
   isVerified: {
     type: Boolean,
