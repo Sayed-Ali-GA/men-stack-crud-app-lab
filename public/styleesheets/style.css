@@ -41,11 +41,14 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: #ffbd59;
+  background-color: #47474764;
   padding: 20px 30px;
   border-radius: 20px;
-  box-shadow: 5px 6px #f47b5b;
+  box-shadow: 5px 6px #000000;
   margin: 20px 10px;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
 .checkbox-div {
@@ -55,4 +58,64 @@ form {
 label,
 input {
   margin: 10px 2px 0 2px;
+}
+
+button {
+  align-self: center;
+  margin: 10px 4px 4px 4px;
+  background-color: #3f6a51;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: none;
+  width: 15em;
+}
+
+li {
+  list-style: none;
+}
+.index-header-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+}
+
+.index-link-text {
+  background-color: #646464;
+  color: white;
+  font-size: 1.4em;
+  width: 10em;
+  padding: 5px 15px;
+  margin: 15px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 5px #000000;
+}
+
+.index-link-text:hover {
+  background-color: #3333332a;
+  box-shadow: 0 5px #3333338b;
+}
+
+.index-link-text:active {
+  background-color: #3333332a;
+  box-shadow: 0 2.5px #3333338b;
+}
+
+.add-cars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  text-decoration: none;
+  width: 6em;
+  text-transform: uppercase;
+  background-color: #769642;
+  border-radius: 30px;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
 }

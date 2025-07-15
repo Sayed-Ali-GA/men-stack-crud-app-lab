@@ -49,8 +49,8 @@
     <h1>Add a New Car</h1>
     <form action="/carsCre" method="POST">
         
-        <label for="Brand">Brand:</label>
-        <input type="text" id="make" name="make" placeholder="e.g. Toyota" required />
+        <label for="brand">Brand:</label>
+        <input type="text" id="brand" name="brand" placeholder="e.g. Toyota" required /> 
 
         <label for="model">Model:</label>
         <input type="text" id="model" name="model" placeholder="e.g. Corolla" required />
@@ -77,8 +77,14 @@
         <textarea id="description" name="description" rows="4" placeholder="Add any details here..."></textarea>
 
         <div class="checkbox-div">
+            
             <label for="isNew">Is the car new?</label>
             <input type="checkbox" id="isNew" name="isNew" />
+        </div>
+
+        <div class="checkbox-div2"> 
+          <label for="isVerified">Verified Listing?</label>
+            <input type="checkbox" id="isVL" name="isVL" />
         </div>
 
         <button type="submit">Add Car</button>

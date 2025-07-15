@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styleesheets/style.css">
+    <title>Cars Index</title>
+</head>
+<body>
+
+  <div class="index-headr-div"> 
+    <h1>All Cars</h1>
+    <a href="/carsCre/new" class="add-car">Add New Car</a>
+  </div>
+
+  <ul>
+    <% allCarsCre.forEach(car => { %>
+      <li>
+        <h2>
+          <a href="/carsCre/<%= car._id %>">
+            <%= car.brand %> <%= car.model %> (<%= car.year %>)
+          </a>
+          <% if (car.isVerified) { %> ✅ <% } %>
+        </h2>
+        <p><strong>Color:</strong> <%= car.color %></p>
+        <p><strong>Price:</strong> <%= car.price %></p>
+        <p><strong>Location:</strong> <%= car.location %></p>
+        <p><strong>Phone:</strong> <%= car.phoneNumber %></p>
+        <% if (car.website) { %>
+          <p>
+            <strong>Website:</strong>
+            <a href="<%= car.website %>" target="_blank">
+              <%= car.website %>
+            </a>
+          </p>
+        <% } %>
+        <p><strong>Description:</strong> <%= car.description %></p>
+        <hr />
+      </li>
+    <% }) %>
+  </ul>
+
+</body>
+
+</html>

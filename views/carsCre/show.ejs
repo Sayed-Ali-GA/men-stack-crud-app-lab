@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/styleesheets/style.css">
+    <title><%= foundCars.brand %></title>
+</head>
+<body>
+    
+   
+    <h1><%= foundCars.brand %></h1>
+          <% if (foundCars.isVerified) { %> ✅ <% } %>
+
+         <p><strong>Model:</strong> <%= foundCars.model %></p>
+        <p><strong>Color:</strong> <%= foundCars.color %></p>
+        <p><strong>Price:</strong> <%= foundCars.price %></p>
+        <p><strong>Location:</strong> <%= foundCars.location %></p>
+        <p><strong>Phone:</strong> <%= foundCars.phoneNumber %></p>
+         <p><strong>Description:</strong> <%= foundCars.description %></p>
+
+        <% if (foundCars.website) { %>
+          <p>
+              <strong>Website:</strong>
+              <a href="<%= foundCars.website %>" target="_blank">
+              <%= foundCars.website %></a>
+          </p>
+        <% } %>
+       
+     
+       <div class="actions">
+             <a class="carsCre-index-link" href="/carsCre">
+      <div class="index-link-text">Back to All Cars</div>
+       </div>
+  
+
+
+</body>
+</html>
