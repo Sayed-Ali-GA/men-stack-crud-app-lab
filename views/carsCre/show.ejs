@@ -27,15 +27,22 @@
           </p>
         <% } %>
        
+         <div class="actions">
+            <form action="/carsCre/<%= foundCars._id %>?_method=DELETE" method="POST">
+                <button class="delete-button" type="submit">Delete <%= foundCars.brand %></button>
+            </form>
+        </div>
      
+        <a class="edit-link" href="/carsCre/<%= foundCars._id %>/edit">
+        <div class="edit-text">Edit <%= foundCars.brand %></div>
+    </a>
+
        <div class="actions">
              <a class="carsCre-index-link" href="/carsCre">
       <div class="index-link-text">Back to All Cars</div>
        </div>
   
-         <a class="edit-link" href="/carsCre/<%= foundCars._id %>/edit">
-        <div class="edit-text">Edit <%= foundCars.brand %></div>
-    </a>
+      
 
 </body>
 </html>

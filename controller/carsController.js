@@ -31,10 +31,18 @@ router.get('/:carsId',async (req, res) => {
   res.render('carsCre/show.ejs', {foundCars: foundCars})
 })
 
+router.delete('/:carsId', async (req, res) => {
+  await Cars.findByIdAndDelete(req.params.carsId)
+  res.redirect('/carsCre')
+  res.send('This is the delete router')
+})
+
 router.get('/:carsId/edit', async (req, res) => {
   const foundCars = await Cars.findById(req.params.carsId)
   res.render('carsCre/edit.ejs', {foundCars: foundCars})
 })
+
+
 
 router.put('/:carsId', async (req, res) => {
   if(req.body.isVerified === "on"){

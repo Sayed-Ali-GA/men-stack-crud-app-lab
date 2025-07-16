@@ -63,7 +63,7 @@ input {
 button {
   align-self: center;
   margin: 10px 4px 4px 4px;
-  background-color: #3f6a51;
+  background-color: #ff0000;
   color: white;
   padding: 5px 10px;
   border-radius: 15px;
@@ -104,7 +104,7 @@ li {
   box-shadow: 0 2.5px #3333338b;
 }
 
-.add-cars {
+.add-car {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,7 +112,7 @@ li {
   text-decoration: none;
   width: 6em;
   text-transform: uppercase;
-  background-color: #769642;
+  background-color: #230076;
   border-radius: 30px;
   color: white;
   padding: 10px;
@@ -126,7 +126,7 @@ li {
 }
 
 .edit-text {
-  background-color: #3f6a51;
+  background-color: #00510c94;
   text-transform: uppercase;
   padding: 40px 15px;
   font-size: 1.3em;
@@ -147,5 +147,14 @@ li {
 
 .edit-text:active {
   background-color: #2d4d3a;
-  background-color: rgb(217, 108, 78);
+  background-color: rgb(98, 98, 98);
+}
+
+.delete-form {
+  padding: 0;
+  box-shadow: 0 0;
+  background-color: transparent;
+  height: 50px;
+  margin: 0 20px 0 0;
+  min-height: 100%;
 }
