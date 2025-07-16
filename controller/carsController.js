@@ -31,5 +31,20 @@ router.get('/:carsId',async (req, res) => {
   res.render('carsCre/show.ejs', {foundCars: foundCars})
 })
 
+router.get('/:carsId/edit', async (req, res) => {
+  const foundCars = await Cars.findById(req.params.carsId)
+  res.render('carsCre/edit.ejs', {foundCars: foundCars})
+})
+
+router.put('/:carsId', async (req, res) => {
+  if(req.body.isVerified === "on"){
+    req.body.isVerified = true
+  }else{
+    req.body.isVerified = false;
+  }
+  
+  await Cars.findByIdAndUpdate(req.params.carsId, req.body)
+  res.redirect(`/carsCre/${req.params.carsId}`)
+})
 
 module.exports = router;

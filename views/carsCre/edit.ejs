@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styleesheets/style.css">
+    <title><%= foundCars.brand %></title>
+</head>
+<body>
+
+     <h1><%= foundCars.brand %></h1>
+
+     <form action="/carsCre/<%= foundCars._id %>?_method=PUT" method="POST">
+        
+        <label for="brand">Brand:</label>
+        <input type="text" id="brand" name="brand" value="<%= foundCars.brand %>" /> 
+
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model" value="<%= foundCars.model %>" />
+
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" value="<%= foundCars.year %>" />
+
+        <label for="color">Color:</label>
+        <input type="text" id="color" name="color" value="<%= foundCars.color %>" />
+
+        <label for="price">Price BD:</label>
+        <input type="number-text" id="price" name="price" value="<%= foundCars.price %>"  />
+
+        <label for="location">Location:</label>
+       <input type="text" name="location" id="location" value="<%= foundCars.location %>"  />
+
+       <label for="phoneNumber">Phone Number:</label>
+       <input type="tel" name="phoneNumber" id="phoneNumber" value="<%= foundCars.phoneNumber %>"  />
+
+       <label for="website">Website:</label>
+       <input type="url" name="website" id="website" value="<%= foundCars.website %>"  />
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" <%= foundCars.description %>></textarea>
+
+        <div class="checkbox-div2"> 
+          <label for="isVerified">Verified Listing?</label>
+            <input type="checkbox" id="isVerified" name="isVerified"  <% if (foundCars.isVerified) { %> checked <% } %> />
+        </div>
+
+         <button type="submit">Edit Car</button>
+    </form>
+ 
+    <div class="actions">
+    <a class="carsCre-index-link" href="/carsCre">
+         <div class="index-link-text">Back to All Cars</div>
+    </a>
+
+</body>
+</html>
